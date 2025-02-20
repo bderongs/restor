@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restor - Découvrez des restaurants qui vous correspondent</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.min.js"></script>
+    <script src="script.js" type="module" defer></script>
 </head>
 
 <body>
@@ -25,8 +27,61 @@
         <section id="hero">
             <div class="hero-content">
                 <h1>Restor</h1>
-                <p class="tagline">Découvrez des restaurants qui vous correspondent vraiment</p>
-                <img src="images/hero-image.jpg" alt="Restaurant ambiance" class="hero-image">
+                <p class="tagline">Le restaurant qu'il vous faut, au moment où il vous faut</p>
+                <div class="hero-cta">
+                    <a href="#download" class="cta-button">Télécharger l'app</a>
+                    <a href="#concept" class="cta-button secondary">En savoir plus</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <img src="images/app-mockup.png" alt="Application Restor" class="app-preview">
+                    </div>
+                    <div class="floating-elements">
+                        <div class="floating-card restaurant-card">
+                            <div class="restaurant-logo">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Le Petit Bistrot</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-card match-card">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Parfait pour ce midi avec Gaëtan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="stats-section">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-wrapper">
+                        <span class="stat-number" id="repas-count">0</span>
+                    </div>
+                    <span class="stat-label">Repas suggérés</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-wrapper">
+                        <span class="stat-number" id="restaurants-count">0</span>
+                        <span class="stat-suffix">+</span>
+                    </div>
+                    <span class="stat-label">Restaurants partenaires</span>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-wrapper">
+                        <span class="stat-number" id="satisfaction-count">0</span>
+                    </div>
+                    <span class="stat-label">Clients satisfaits</span>
+                </div>
             </div>
         </section>
 
@@ -34,14 +89,17 @@
             <h2>Comment ça marche ?</h2>
             <div class="features">
                 <div class="feature">
+                    <i class="fa-solid fa-star-half-stroke feature-icon"></i>
                     <h3>Notez vos expériences</h3>
                     <p>Évaluez les restaurants que vous visitez pour affiner vos préférences</p>
                 </div>
                 <div class="feature">
+                    <i class="fa-solid fa-brain feature-icon"></i>
                     <h3>Algorithme intelligent</h3>
                     <p>Notre système analyse vos goûts et vos habitudes pour des recommandations personnalisées</p>
                 </div>
                 <div class="feature">
+                    <i class="fa-solid fa-compass feature-icon"></i>
                     <h3>Découvrez</h3>
                     <p>Recevez des suggestions adaptées à vos préférences et à votre historique</p>
                 </div>
@@ -64,12 +122,18 @@
             <h2>Notre équipe</h2>
             <div class="team-members">
                 <div class="member">
+                    <div class="member-image-wrapper">
+                        <img src="images/thomas.jpg" alt="Thomas" class="member-image">
+                    </div>
                     <h3>Thomas</h3>
                     <p class="role">Développement Commercial</p>
                     <p>Passionné par la gastronomie et le développement commercial, Thomas travaille à faire connaître
                         Restor auprès des restaurateurs et des utilisateurs.</p>
                 </div>
                 <div class="member">
+                    <div class="member-image-wrapper">
+                        <img src="images/gaetan.jpg" alt="Gaëtan" class="member-image">
+                    </div>
                     <h3>Gaëtan</h3>
                     <p class="role">Directeur Technique</p>
                     <p>Expert en technologie, Gaëtan développe l'algorithme de recommandation et s'assure de la
