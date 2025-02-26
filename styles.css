@@ -465,9 +465,9 @@ footer {
 
 .modal-content {
     background: white;
-    padding: 2.5rem;
-    border-radius: 0;
-    max-width: 500px;
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 400px;
     width: 90%;
     text-align: center;
     position: relative;
@@ -475,56 +475,49 @@ footer {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes modalAppear {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem auto;
+}
 
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+.modal-icon i {
+    font-size: 2.5rem;
+    color: white;
 }
 
 .modal-content h3 {
-    color: var(--primary-color);
+    color: var(--dark-color);
     margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .modal-content p {
-    margin-bottom: 1rem;
-}
-
-.real-link {
-    display: inline-block;
-    color: white;
-    background-color: var(--primary-color);
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    text-decoration: none;
-    margin: 1rem 0;
-    transition: transform 0.3s ease;
-}
-
-.real-link:hover {
-    transform: translateY(-2px);
+    margin-bottom: 0.5rem;
+    color: #636e72;
+    font-size: 1.1rem;
 }
 
 .close-modal {
-    display: block;
-    margin: 1rem auto 0;
-    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
     border: none;
-    background-color: var(--dark-color);
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
     color: white;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1rem;
 }
 
 .close-modal:hover {
-    background-color: #1a2632;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .feature-icon {
