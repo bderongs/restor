@@ -467,7 +467,7 @@ footer {
     background: white;
     padding: 3rem;
     border-radius: 20px;
-    max-width: 400px;
+    max-width: 450px;
     width: 90%;
     text-align: center;
     position: relative;
@@ -494,30 +494,91 @@ footer {
 .modal-content h3 {
     color: var(--dark-color);
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
-.modal-content p {
-    margin-bottom: 0.5rem;
+.modal-main {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.modal-sub {
     color: #636e72;
     font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.modal-ctas {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-link {
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.modal-link.primary {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
+    color: white;
+}
+
+.modal-link.secondary {
+    background: #f1f2f6;
+    color: var(--dark-color);
+}
+
+.modal-link.secondary i {
+    font-size: 1.2rem;
+}
+
+.modal-link.secondary:hover {
+    background: #e4e6eb;
 }
 
 .close-modal {
-    margin-top: 2rem;
-    padding: 0.8rem 2rem;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
     border: none;
-    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-middle));
-    color: white;
-    border-radius: 25px;
+    background: transparent;
+    color: #636e72;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-size: 0.9rem;
 }
 
 .close-modal:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: var(--dark-color);
+}
+
+@media (max-width: 768px) {
+    .modal-ctas {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        padding: 2rem;
+    }
+
+    .modal-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-link {
+        padding: 1rem 1.5rem;
+    }
 }
 
 .feature-icon {
